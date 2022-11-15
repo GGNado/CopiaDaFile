@@ -17,7 +17,14 @@ void writeFile(char* nomeFile){
 	char buf[30];
 	
 	file = fopen(nomeFile, "w");
-
+	/*
+	//ESCE QUADNO PREMI CTRL+D solo che su windows non funziona
+	while(fgets(buf, sizeof(buf), stdin) != NULL  ){
+        
+        fputs(buf, file);
+        
+    }
+	*/
 	for (int i = 0; i < 5; ++i){
 		printf("Cosa scrivo nel file?\n");
 		gets(buf);
